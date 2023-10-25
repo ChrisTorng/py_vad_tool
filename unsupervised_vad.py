@@ -37,12 +37,12 @@ def plot_these(s1,s2):
     import pylab
     try:
         # If values are numpy arrays
-        pylab.plot(s1/max(abs(s1)),color='red')
-        pylab.plot(s2/max(abs(s2)),color='blue')
+        pylab.plot(s1/max(abs(s1)),color='red', label='Voice Activity')
+        pylab.plot(s2/max(abs(s2)),color='blue', label='Wave')
     except:
         # Values are lists
-        pylab.plot(s1,color='red')
-        pylab.plot(s2,color='blue')
+        pylab.plot(s1,color='red', label='Voice Activity')
+        pylab.plot(s2,color='blue', label='Wave')
     pylab.legend()
     pylab.show()
 
